@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nodecitiesali
-        image: $DOCKER_USERNAME/nodecitiesali
+        image: $DOCKER_USERNAME/nodecitiesali:$WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
         imagePullPolicy: Always
         ports:
         - name: nodecitiesali
