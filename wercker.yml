@@ -16,7 +16,7 @@ push:
       username: $DOCKER_USERNAME
       password: $DOCKER_PASSWORD
       tag: latest
-      repository: $DOCKER_USERNAME/nodecities
+      repository: $DOCKER_USERNAME/nodecitiesali
       ports: "8080"
       working-dir: /pipeline/source
       cmd: node app.js

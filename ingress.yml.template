@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: nodecities-ing
+  name: nodecitiesali-ing
   annotations:
     kubernetes.io/ingress.class: 'nginx'
     ingress.kubernetes.io/add-base-url: 'true'
@@ -14,7 +14,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /$WERCKER_APPLICATION_OWNER_NAME/nodecities
+      - path: /$WERCKER_APPLICATION_OWNER_NAME/nodecitiesali
         backend:
-          serviceName: nodecities-svc
-          servicePort: 8085
+          serviceName: nodecitiesali-svc
+          servicePort: 8086

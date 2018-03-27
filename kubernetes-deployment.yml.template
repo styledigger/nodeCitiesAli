@@ -1,9 +1,9 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nodecities
+  name: nodecitiesali
   labels:
-    run: nodecities
+    run: nodecitiesali
 spec:
   replicas: 1
   strategy:
@@ -14,14 +14,14 @@ spec:
   template:
     metadata:
       labels:
-        run: nodecities
+        run: nodecitiesali
     spec:
       containers:
-      - name: nodecities
-        image: $DOCKER_USERNAME/nodecities
+      - name: nodecitiesali
+        image: $DOCKER_USERNAME/nodecitiesali
         imagePullPolicy: Always
         ports:
-        - name: nodecities
+        - name: nodecitiesali
           containerPort: 8080
           protocol: TCP
       restartPolicy: Always
@@ -29,11 +29,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodecities-svc
+  name: nodecitiesali-svc
 spec:
   selector:
-    run: nodecities
+    run: nodecitiesali
   ports:
-    - port: 8085
+    - port: 8086
       targetPort: 8080
   type: ClusterIP
